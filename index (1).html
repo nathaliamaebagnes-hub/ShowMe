@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShowMe App</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="phone">
+
+<!-- LOGIN -->
+<section class="page active" id="loginPage">
+  <div class="logo"><img src="images/logo.png"></div>
+
+  <h1>Welcome back!</h1>
+
+  <div class="input-group">
+    <label>Email</label>
+    <input type="email" id="loginEmail">
+  </div>
+
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="loginPassword">
+  </div>
+
+  <button onclick="loginUser()">Continue</button>
+
+  <div class="bottom-text">
+    <p>Don't have an account?</p>
+    <span onclick="goToPage('signupPage')">Sign up</span>
+  </div>
+</section>
+
+<!-- SIGNUP PAGE -->
+  <section class="page" id="signupPage">
+
+    <div class="top">
+      <span class="back" onclick="goBack()">←</span>
+    </div>
+
+    <div class="logo">
+  <img src="images/logo.png" alt="ShowMe Logo">
+</div>
+
+    <h2>Sign up to track your screen time!</h2>
+
+    <div class="input-group">
+    <label>Email</label>
+    <input type="email" id="signupEmail" placeholder="Enter your email">
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="signupPassword" placeholder="Enter your password">
+  </div>
+
+    <button onclick="signupUser()">
+  Next
+</button>
+
+    <!-- GOOGLE BUTTON -->
+<a href="https://accounts.google.com/signup" target="_blank" class="social-link">
+  <button class="social-btn">
+    <img src="images/Google.png" alt="Google" class="icon">
+    <span>Sign up with Google</span>
+  </button>
+</a>
+
+<!-- APPLE BUTTON -->
+<a href="https://account.apple.com/sign-in" target="_blank" class="social-link">
+  <button class="social-btn">
+    <img src="images/apple.png" alt="Apple" class="icon">
+    <span>Sign up with Apple</span>
+  </button>
+</a>
+
+    <div class="bottom-text">
+      <p>Already have an account?</p>
+      <span onclick="goBack()">Log in</span>
+    </div>
+
+  </section>
+
+<!-- DASHBOARD -->
+<section class="page" id="dashboardPage">
+
+  <div class="top">
+    <h3>Dashboard</h3>
+  </div>
+
+  <div class="card">
+    <p>Total Screen Time</p>
+    <h1>4hrs 32m</h1>
+  <div class="graph">
+
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+
+      </div>
+
+    </div>
+
+<div class="app">
+
+  <div class="app-left">
+    <img src="images/Instagram.png" class="app-icon">
+    <span>Instagram</span>
+  </div>
+
+  <span>47 min</span>
+
+</div>
+
+<div class="app">
+
+  <div class="app-left">
+    <img src="images/Facebook.png" class="app-icon">
+    <span>Facebook</span>
+  </div>
+
+  <span>29 min</span>
+
+</div>
+
+<div class="app">
+
+  <div class="app-left">
+    <img src="images/Tiktok.png" class="app-icon">
+    <span>Tiktok</span>
+  </div>
+
+  <span>10 min</span>
+
+</div>
+
+<div class="app">
+
+  <div class="app-left">
+    <img src="images/Twitter.png" class="app-icon">
+    <span>Twitter</span>
+  </div>
+
+  <span>23 min</span>
+
+</div>
+
+  <!-- BUTTON FIXED -->
+  <button onclick="goToPage('allAppsPage')">
+    View All Apps
+  </button>
+
+  <div class="nav">
+    <span onclick="goToPage('dashboardPage')">🏠</span>
+    <span onclick="goToPage('focusPage')">🎯</span>
+    <span onclick="goToPage('goalPage')">🏆</span>
+    <span onclick="goToPage('settingsPage')">⚙</span>
+  </div>
+
+</section>
+
+<!-- ALL APPS PAGE-->
+<section class="page" id="allAppsPage">
+
+  <div class="top">
+    <span class="back" onclick="goBack()">←</span>
+    <h3>All Apps</h3>
+  </div>
+
+  <div class="apps">
+
+  <div class="app">
+  <div class="app-left">
+    <img src="images/Instagram.png" alt="Instagram">
+    <span>Instagram</span>
+  </div>
+
+  <span class="time">47 min</span>
+</div>
+
+<div class="app">
+  <div class="app-left">
+    <img src="images/Facebook.png" alt="Facebook">
+    <span>Facebook</span>
+  </div>
+
+  <span class="time">29 min</span>
+</div>
+
+<div class="app">
+  <div class="app-left">
+    <img src="images/Tiktok.png" alt="TikTok">
+    <span>TikTok</span>
+  </div>
+
+  <span class="time">10 min</span>
+</div>
+
+<div class="app">
+  <div class="app-left">
+    <img src="images/Twitter.png" alt="Twitter">
+    <span>Twitter</span>
+  </div>
+
+  <span class="time">23 min</span>
+</div>
+</section>
+
+<!-- FOCUS MODE -->
+  <section class="page" id="focusPage">
+
+    <div class="top">
+      <span class="back" onclick="goBack()">←</span>
+      <h3>Focus Mode</h3>
+    </div>
+
+    <div class="card">
+
+      <div class="switch-area">
+
+        <div>
+          <h4>Focus Mode</h4>
+          <p>Stay focused and avoid distraction</p>
+        </div>
+
+        <label class="switch">
+
+          <input type="checkbox" checked>
+
+          <span class="slider"></span>
+
+        </label>
+
+      </div>
+
+    </div>
+
+    <h4>Block Distracting Apps</h4>
+
+    <div class="check-app">
+  <div class="app-left">
+    <img src="images/Instagram.png" alt="Instagram">
+    <span>Instagram</span>
+  </div>
+
+  <input type="checkbox" checked>
+</div>
+
+<div class="check-app">
+  <div class="app-left">
+    <img src="images/Tiktok.png" alt="TikTok">
+    <span>TikTok</span>
+  </div>
+
+  <input type="checkbox" checked>
+</div>
+
+<div class="check-app">
+  <div class="app-left">
+    <img src="images/Twitter.png" alt="Twitter">
+    <span>Twitter</span>
+  </div>
+
+  <input type="checkbox" checked>
+</div>
+
+<div class="check-app">
+  <div class="app-left">
+    <img src="images/Facebook.png" alt="Facebook">
+    <span>Facebook</span>
+  </div>
+
+  <input type="checkbox" checked>
+</div>
+  </section>
+
+<!-- GOALS -->
+  <section class="page" id="goalPage">
+
+    <div class="top">
+      <span class="back" onclick="goBack()">←</span>
+      <h3>Goals</h3>
+    </div>
+
+    <div class="goal-badge">
+      ⭐
+    </div>
+
+    <h2>Great Job!</h2>
+
+    <p class="goal-text">
+      You've completed your goal for today.
+    </p>
+
+    <div class="card">
+
+      <div class="app">
+        <span>Screen time</span>
+        <span>3h 45min</span>
+      </div>
+
+      <div class="app">
+        <span>Goal</span>
+        <span>4h ✔</span>
+      </div>
+
+      <div class="app">
+        <span>Focus Sessions</span>
+        <span>2</span>
+      </div>
+
+      <div class="app">
+        <span>Breaks Taken</span>
+        <span>3</span>
+      </div>
+
+      <div class="app">
+        <span>Drink water</span>
+      </div>
+
+    </div>
+
+    <button onclick="goToPage('progressPage')">
+      View Progress
+    </button>
+
+  </section>
+
+<!-- PROGRESS -->
+<section class="page" id="progressPage">
+
+    <div class="top">
+    <span class="back" onclick="goBack()">←</span>
+    <h3>Progress</h3>
+  </div>
+
+  <div class="apps">
+    <div class="app"><span>Today's Goal</span></div>
+    <div class="app"><span>Screen time goal</span><span>4 hours</span></div>
+    <div class="app"><span>Focus session</span><span>2</span></div>
+    <div class="app"><span>Breaks</span><span>3+</span></div>
+    <div class="app"><span>Drink water<span></span>
+  </div>
+
+   <div class="apps">
+    <div class="app"><span>Tomorrow's Goal</span></div>
+    <div class="app"><span>Screen time goal</span><span>4 hours</span></div>
+    <div class="app"><span>Focus session</span><span>3</span></div>
+    <div class="app"><span>Breaks</span><span>4+</span></div>
+    <div class="app"><span>Meditate<span></span></span></div>
+  </div>
+
+</section>
+
+<!-- REMINDER PAGE -->
+<section class="page" id="reminderPage">
+
+  <div class="top">
+    <span class="back" onclick="goBack()">←</span>
+    <h3>Reminder Timer</h3>
+  </div>
+
+  <div class="timer-circle">
+    <div>
+      <h1 id="timerDisplay">25:00</h1>
+      <p>Focus Time</p>
+    </div>
+  </div>
+
+  <div class="session-btns">
+
+    <button onclick="setTime(25)"> 25 Min</button>
+
+    <button onclick="setTime(50)"> 50 Min</button>
+
+    <button onclick="customTime()"> Custom</button>
+
+  </div>
+
+  <button onclick="startTimer()"> Start Timer</button>
+
+  <button onclick="stopTimer()"> Stop Timer</button>
+
+  <button onclick="resetTimer()"> Reset</button>
+
+</section>
+
+<!-- SETTINGS -->
+  <section class="page" id="settingsPage">
+
+    <div class="top">
+      <span class="back" onclick="goBack()">←</span>
+      <h3>Dashboard</h3>
+    </div>
+
+    <div class="settings-card" onclick="alert('Dashboard Opened')">
+      Dashboard →
+    </div>
+
+    <div class="settings-card" onclick="goToPage('focusPage')">
+      Focus Mode →
+    </div>
+
+    <div class="settings-card" onclick="goToPage('reminderPage')">
+      Reminder →
+    </div>
+
+    <div class="settings-card" onclick="goToPage('goalPage')">
+      Usual Goals →
+    </div>
+
+  </section>
+
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

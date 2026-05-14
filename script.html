@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First JavaScript</title>
+</head>
+<body>
+    <h2>Student information</h2>
+
+    <label for="studentName">Name</label>
+    <input type="text" id="studentName" placeholder="Enter your name: "><br><br>
+
+    <label for="studentCourse">Course</label>
+    <input type="text" id="studentCourse" placeholder="Enter your course: "><br><br>
+
+    <button onclick="displayInfo()">Submit</button>
+
+    <p id="infoDisplay"></p>
+
+    <script>
+        function displayInfo() {
+            const name = document.getElementById("studentName").value;
+            const course = document.getElementById("studentCourse").value;
+
+            document.getElementById("infoDisplay").innerText =
+                "Student Name: " + name + "\nCourse: " + course;
+        }
+    </script>
+</body>
+</html>
